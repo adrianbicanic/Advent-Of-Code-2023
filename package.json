@@ -1,0 +1,9 @@
+{
+  "name": "advent-of-code-2023",
+  "version": "1.0.0",
+  "description": "Advent of code solutions created with TypeScript.",
+  "scripts": {},
+  "keywords": [],
+  "author": "Adrian Bićanić",
+  "license": "MIT"
+}
