@@ -12,14 +12,10 @@ const dayNumber = process?.argv.find(arg => arg.startsWith('day='))?.split('=')[
 const challengeNumber = process?.argv.find(arg => arg.startsWith('challenge='))?.split('=')[1];
 
 const scriptPath = join(__dirname, `day-${dayNumber}/challenge-${challengeNumber}/index.ts`);
-const inputPath =  join(__dirname, `day-${dayNumber}/challenge-${challengeNumber}/input.txt`);
 
 // Import the solve function from a specific challenge
 const { solve } = require(scriptPath);
 
-// Parse the input based on the task's requirements
-const inputData = parseInput(inputPath);
-
 // Run the specified challenge and log the solution
-const solution = solve(inputData);
+const solution = solve();
 readSolution(solution, Number(dayNumber), Number(challengeNumber));
