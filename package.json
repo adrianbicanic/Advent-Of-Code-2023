@@ -2,8 +2,16 @@
   "name": "advent-of-code-2023",
   "version": "1.0.0",
   "description": "Advent of code solutions created with TypeScript.",
-  "scripts": {},
+  "scripts": {
+    "start": "ts-node --require tsconfig-paths/register src/run.ts"
+  },
   "keywords": [],
   "author": "Adrian Bićanić",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.2"
+  }
 }
