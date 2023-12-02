@@ -10,10 +10,10 @@ npm install
 
 ## Read challenge solution
 
-Every day has two challenges.
-To read a challenge solution (using challenge 1 from day 1 as an example): 
+Every day's challenge has two parts.
+To read a solution (using challenge 1 from day 1 as an example): 
 
 ```bash
-npm start -- day=1 challenge=1
+npm start -- day=1 part=2
 ```
 

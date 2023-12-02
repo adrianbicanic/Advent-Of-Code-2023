@@ -15,5 +15,5 @@ export function parseInput(filePath: string, options: IParseOptions = {}): Input
   return split ? rawInput.split('\n') : rawInput;
 }
 
-export const readSolution = (solution: number | string, day: number, challenge: number) => 
-    console.log(`Solution for day ${day}, challenge ${challenge}: ${solution}`);
+export const readSolution = (solution: number | string, day: number, part: number) => 
+    console.log(`Solution for day ${day}, part ${part}: ${solution}`);

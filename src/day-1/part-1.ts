@@ -1,5 +1,5 @@
 import { join } from "path";
-import { InputType, parseInput } from "../../utils";
+import { InputType, parseInput } from "../utils";
 
 const inputPath = join(__dirname, 'input.txt');
 const inputData = parseInput(inputPath) as Array<string>;
