@@ -1,10 +1,7 @@
 import { join } from 'path';
 import { parseInput } from '../utils';
 
-const inputPath = join(__dirname, 'input.txt');
-const inputData = parseInput(inputPath) as Array<string>;
-
-/**
+/*
  * Trebuchet?!
  *
  * --- Part Two ---
@@ -25,6 +22,9 @@ const inputData = parseInput(inputPath) as Array<string>;
  * In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Adding these together produces 281.
  */
 
+const inputPath = join(__dirname, 'input.txt');
+const inputData = parseInput(inputPath) as Array<string>;
+
 const digitNumeralsDictionary: Record<string, string> = {
 	one: '1',
 	two: '2',
@@ -40,11 +40,11 @@ const digitNumeralsDictionary: Record<string, string> = {
 const digitNumerals = Object.keys(digitNumeralsDictionary);
 const digits = Object.values(digitNumeralsDictionary);
 
-const findFirstDigitRecursive = (
+function findFirstDigitRecursive(
 	input: string,
 	index: number,
 	direction: 'forwards' | 'reverse' = 'forwards'
-): string | null => {
+): string | null {
 	if (direction === 'forwards' && index >= input.length) {
 		return null;
 	}
@@ -72,7 +72,7 @@ const findFirstDigitRecursive = (
 
 	// We continue searching reccursively; We always check each character, because numerals can sometimes share a character
 	return findFirstDigitRecursive(input, nextIndex, direction);
-};
+}
 
 export function solve(): number {
 	const addends = inputData.map((input) => {

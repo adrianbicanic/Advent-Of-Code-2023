@@ -1,10 +1,7 @@
 import { join } from 'path';
 import { parseInput } from '../utils';
 
-const inputPath = join(__dirname, 'input.txt');
-const inputData = parseInput(inputPath) as Array<string>;
-
-/**
+/*
  * Trebuchet?!
  *
  * --- Part One ---
@@ -22,6 +19,9 @@ const inputData = parseInput(inputPath) as Array<string>;
  * In this example, the calibration values of these four lines are `12`, `38`, `15`, and `77`. Adding these together produces `142`.
  * Consider your entire calibration document. What is the sum of all of the calibration values?
  */
+
+const inputPath = join(__dirname, 'input.txt');
+const inputData = parseInput(inputPath) as Array<string>;
 
 export function solve(): number {
 	const addends = inputData.map((input) => {
