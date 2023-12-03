@@ -1,7 +1,7 @@
 
-import * as tsNode from 'ts-node';
 import { join } from 'path';
-import { readSolution, parseInput } from '../src/utils';
+import * as tsNode from 'ts-node';
+import { readSolution } from '../src/utils';
 
 // Ensure ts-node is registered to compile TypeScript on the fly
 tsNode.register();
