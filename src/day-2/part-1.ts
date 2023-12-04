@@ -1,5 +1,6 @@
 import { join } from 'path';
-import { parseInput } from '../utils';
+import { sum } from '../utils/array';
+import { parseInput } from '../utils/data';
 
 /*
  * You play several games and record the information from each game (your puzzle input).
@@ -35,9 +36,9 @@ const cubeTotalByColor = {
 	blue: 14,
 } as const;
 
-type CubeRevealTuple = [count: number, color: 'red' | 'green' | 'blue'];
+export type CubeRevealTuple = [count: number, color: 'red' | 'green' | 'blue'];
 
-const getGameData = (input: string): [id: number, reveals: Array<CubeRevealTuple>] => {
+export const getGameData = (input: string): [id: number, reveals: Array<CubeRevealTuple>] => {
 	const id = Number(input.split(':')[0].split(' ')[1]);
 
 	const sets = input
@@ -65,10 +66,8 @@ const isRevealPossible = (reveal: CubeRevealTuple) => {
 export function solve(): number {
 	const validGamesIds = inputData
 		.map(getGameData)
-		.filter(([, reveals]) => !reveals.some((reveal) => !isRevealPossible(reveal)))
+		.filter(([_, reveals]) => !reveals.some((reveal) => !isRevealPossible(reveal)))
 		.map(([id]) => id);
 
-	const sum = validGamesIds.reduce((sum, addend) => (sum += addend), 0);
-
-	return sum;
+	return sum(validGamesIds);
 }
