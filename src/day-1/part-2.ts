@@ -24,7 +24,7 @@ import { parseInput } from '../utils/file';
  */
 
 const inputPath = join(__dirname, 'input.txt');
-const inputData = parseInput(inputPath) as Array<string>;
+const inputData = parseInput(inputPath);
 
 const digitNumeralsDictionary: Record<string, string> = {
 	one: '1',

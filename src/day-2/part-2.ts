@@ -30,7 +30,7 @@ For each game, find the minimum set of cubes that must have been present. What i
  */
 
 const inputPath = join(__dirname, 'input.txt');
-const inputData = parseInput(inputPath) as Array<string>;
+const inputData = parseInput(inputPath);
 
 export type CubeRevealTuple = [count: number, color: 'red' | 'green' | 'blue'];
 export type GameData = [id: number, reveals: Array<CubeRevealTuple>];
