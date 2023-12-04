@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { power, sum } from '../utils/array';
-import { parseInput } from '../utils/data';
+import { parseInput } from '../utils/file';
 
 /*
 In each game you played, what is the fewest number of cubes of each color

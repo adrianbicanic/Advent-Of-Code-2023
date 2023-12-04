@@ -1,6 +1,6 @@
 import { join } from 'path';
 import * as tsNode from 'ts-node';
-import { readSolution } from './utils/data';
+import { readSolution } from './utils/console';
 
 // Ensure ts-node is registered to compile TypeScript on the fly
 tsNode.register();

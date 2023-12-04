@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { sum } from '../utils/array';
-import { parseInput } from '../utils/data';
+import { parseInput } from '../utils/file';
 
 /*
  * You play several games and record the information from each game (your puzzle input).
