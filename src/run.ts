@@ -1,15 +1,14 @@
-
 import { join } from 'path';
 import * as tsNode from 'ts-node';
-import { readSolution } from '../src/utils';
+import { readSolution } from './utils/data';
 
 // Ensure ts-node is registered to compile TypeScript on the fly
 tsNode.register();
 
 // Find the specified day and part paths
 // TODO: add error handling
-const dayNumber = process?.argv.find(arg => arg.startsWith('day='))?.split('=')[1];
-const partNumber = process?.argv.find(arg => arg.startsWith('part='))?.split('=')[1];
+const dayNumber = process?.argv.find((arg) => arg.startsWith('day='))?.split('=')[1];
+const partNumber = process?.argv.find((arg) => arg.startsWith('part='))?.split('=')[1];
 
 const scriptPath = join(__dirname, `day-${dayNumber}/part-${partNumber}.ts`);
 

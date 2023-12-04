@@ -1,5 +1,6 @@
 import { join } from 'path';
-import { parseInput } from '../utils';
+import { sum } from 'utils/array';
+import { parseInput } from '../utils/data';
 
 /*
  * Trebuchet?!
@@ -31,7 +32,5 @@ export function solve(): number {
 		return Number(`${firstDigit}${lastDigit}`);
 	});
 
-	const sum = addends.reduce((sum, addend) => (sum += addend), 0);
-
-	return sum;
+	return sum(addends);
 }

@@ -1,5 +1,6 @@
 import { join } from 'path';
-import { parseInput } from '../utils';
+import { sum } from 'utils/array';
+import { parseInput } from '../utils/data';
 
 /*
  * Trebuchet?!
@@ -40,19 +41,7 @@ const digitNumeralsDictionary: Record<string, string> = {
 const digitNumerals = Object.keys(digitNumeralsDictionary);
 const digits = Object.values(digitNumeralsDictionary);
 
-function findFirstDigitRecursive(
-	input: string,
-	index: number,
-	direction: 'forwards' | 'reverse' = 'forwards'
-): string | null {
-	if (direction === 'forwards' && index >= input.length) {
-		return null;
-	}
-
-	if (direction === 'reverse' && index <= -1) {
-		return null;
-	}
-
+function findFirstDigitRecursive(input: string, index: number, direction: 'forwards' | 'reverse' = 'forwards'): string {
 	const currentCharacter = input[index];
 
 	if (digits.includes(currentCharacter)) {
@@ -82,7 +71,5 @@ export function solve(): number {
 		return Number(`${firstDigit}${lastDigit}`);
 	});
 
-	const sum = addends.reduce((sum, addend) => (sum += addend), 0);
-
-	return sum;
+	return sum(addends);
 }
