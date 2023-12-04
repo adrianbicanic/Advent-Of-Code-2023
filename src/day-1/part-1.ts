@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { sum } from 'utils/array';
+import { sum } from '../utils/array';
 import { parseInput } from '../utils/data';
 
 /*
